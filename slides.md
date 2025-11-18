@@ -17,29 +17,20 @@ name: Clement Balea
 imageSrc: https://elio.dev/eliostruyf_2024.webp
 position: left
 job: Software Engineer
-line1: "#Stickerpreneur @ pyod.shop"
-line2: "#Maintainer @ Front Matter CMS"
-social1: "@eliostruyf"
-social2: eliostruyf.com
-social3: elio@struyfconsulting.be
 ---
 
----
-layout: cover
----
-
-# Cover title
-
-Subtitle for the cover
-
-<img src="https://wotlk.murlocvillage.com/images/murloc_village_logo.webp" class="mt-6 w-60 mx-auto" />
 ---
 layout: section
 ---
 
 # Section title
 
-Subtitle for the section
+- Subtitle for the section
+- Subtitle for the section
+- Subtitle for the section
+- Subtitle for the section
+- Subtitle for the section
+- Subtitle for the section
 
 ---
 layout: center
@@ -53,16 +44,40 @@ Subtitle for the center layout
 layout: two-cols
 ---
 
-# Left
-
-This shows on the left
+# Testing Pyramid
+![alt text](./assets/pyramid.png)
 
 ::right::
 
-# Right
+# Tools
+ <br /> <br /> <br /> <br /> <br /> 
+- **E2E:** Cypress · Playwright · Selenium <br /> <br />
+- **Integration:** Postman with Newman<br /> <br />
+- **Unit:** coverage · SonarQube
 
-This shows on the right
+---
+layout: section
+---
 
+# Code
+<br />
+```py
+def plus(val_1: int, val_2: int) -> int:
+    return val_1 + val_2
+```
+
+<br />
+<br />
+
+# Test
+<br />
+```py
+def test_plus():
+    assert 3 == plus(1,2)
+    assert -1 == plus(1,-2)
+    assert -3 == plus(-1,-2)
+```
+ 
 ---
 
 # Code with Shiki and The unnamed theme
