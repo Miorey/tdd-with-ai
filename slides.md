@@ -61,13 +61,13 @@ def test_plus():
 
 # Example 1: generate tests and modify code
 
-- Generate tests for a function with LLM
-- The test coverage shows us the uncovered lines ex we add:
+- Generate tests for a function with an LLM
+- The test coverage shows the uncovered lines, ex for example:
 ```py
     elif last_name == "Summers":
         ret = "Buffy Summers" 
 ```
-- Rewriting function without regressions ex:
+- Rewriting function without regressions, ex:
 ```py
 def find_full_name_v1(last_name: str) -> str | None:
     return { "Bond": "James Bond", "Rosenberg": "Willow Rosenberg" }.get(last_name)
