@@ -69,7 +69,7 @@ def plus(val_1: int, val_2: int) -> int:
 <br />
 <br />
 
-# Test
+# Unit Test
 <br />
 ```py
 def test_plus():
@@ -80,47 +80,33 @@ def test_plus():
  
 ---
 
-# Code with Shiki and The unnamed theme
+# Example 1: generate tests and modify code
 
-The code highlighting is powered by Shiki and [The unnamed - VS Code theme](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-unnamed-theme)
-
-```ts
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
+- Generate tests for a function with LLM
+- The test coverage shows us the uncovered lines ex we add:
+```py
+    elif last_name == "Summers":
+        ret = "Buffy Summers" 
 ```
+- Rewriting function without regressions ex:
+```py
+def find_full_name_v1(last_name: str) -> str | None:
+    return { "Bond": "James Bond", "Rosenberg": "Willow Rosenberg" }.get(last_name)
+    
+def find_full_name_v3(last_name: str) -> str:
+    return find_full_name_v1(last_name) or (lambda: (_ for _ in ()).throw(ValueError("Full name not found")))()
+```
+- Coverage limitations
+- 100% coverage is expensive and useless
 
 ---
 
-# Table
+# Example 2: Test driven development
 
-| Title | Description | Default |
-| --- | --- | --- |
-| `layout` | The layout to use for the slide | `default` |
-| `theme` | The theme to use for the slide | `the-unnamed` |
-| `highlighter` | The highlighter to use for the slide | `shiki` |
-| `background` | The background to use for the slide | `none` |
-
-## Content test underneath
-
-Some content to place here
-
----
-
-# Todo
-
-- [ ] Add a todo list
-- [ ] Add a todo list
-- [x] Add a todo list
+- The main idea is to write the tests first
+- Then write the code to make them pass
+- Refactoring is easy because we have a clear picture of what we want to achieve
+- But sometimes writing the tests takes more time than writing the code
 
 ---
 
