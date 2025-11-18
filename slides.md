@@ -5,40 +5,19 @@ layout: cover
 background: https://sli.dev/demo-cover.png
 ---
 
-# Slidev - The Unnamed
+# TDD with LLMs
 
-Created by [Elio Struyf](https://eliostruyf.com)
+Created by [Clement Balea](https://miorey.github.io/)
 
 ---
 layout: about-me
 
 helloMsg: Hi!
 name: Clement Balea
-imageSrc: https://elio.dev/eliostruyf_2024.webp
+imageSrc: ./assets/me.png
 position: left
 job: Software Engineer
 ---
-
----
-layout: section
----
-
-# Section title
-
-- Subtitle for the section
-- Subtitle for the section
-- Subtitle for the section
-- Subtitle for the section
-- Subtitle for the section
-- Subtitle for the section
-
----
-layout: center
----
-
-# Center title
-
-Subtitle for the center layout
 
 ---
 layout: two-cols
@@ -104,115 +83,39 @@ def find_full_name_v3(last_name: str) -> str:
 # Example 2: Test driven development
 
 - The main idea is to write the tests first
-- Then write the code to make them pass
+- Then ~~write~~ let the LLM write the code to make them pass
 - Refactoring is easy because we have a clear picture of what we want to achieve
 - But sometimes writing the tests takes more time than writing the code
 
 ---
 
-# Heading 1
+# Example 3: Sometimes small clean tests creates complex and powerful code
 
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-> **Info**: This is a note
+- Transforming a text into leet text regardless the language:
+ex: 
+- "Hello world" -> "H3ll0 w0rld"
+- "Tragi mâța de coadă" -> "7r4g1 m474 d3 c04d4"
+- The LLM is able to improvise rules that you forgot
+- But not always all of them ex: `â` => `4`
 
 ---
 
-# What is Slidev?
+# Examples 4: more complex problems and thought steps
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
+- If the LLM isn't able to find the code based on the tests, you might make a step test
+- Generate code is not always optimised and can be a crap
+- Cyclomatic complexity can help us to think when we should refactor:
+`iris-vc-api` -> `test_utils.py` -> `test_find_founder_name`
+- Today I use it in quite all my projects, and it accelerates and improve my code quality
+`iris-fund` -> `test_admin_lib.py` -> `test_filename_to_document_info`
 
 ---
 
-# Navigation
+# Conclusion
 
-Hover on the bottom-left corner to see the navigation's controls panel
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+- Test driven development can accelerate the development process
+- You might wisely choose which of the test or the code you write first
+- This guarantee a more robust and maintainable code
+- You should always understand what you do, because LLM creates good code but also crapy code
 
 ---
-layout: image-right
-image: 'https://source.unsplash.com/collection/94734566/1920x1080'
----
-
-# Code
-
-Use code snippets and get the highlighting directly!
-
-```ts
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
---- 
-
-# Monaco Editor
-
-```ts {monaco}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
---- 
-
-# Monaco Editor
-
-```ts {monaco-run} {autorun:false}
-console.log('Click the play button to run me')
-```
-
----
-layout: center
-class: "text-center"
----
-
-# Learn More
-
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
