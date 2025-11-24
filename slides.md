@@ -7,7 +7,7 @@ background: https://sli.dev/demo-cover.png
 
 # TDD with LLMs
 
-Created by [Clement Balea](https://miorey.github.io/)
+By [Clement Balea](https://miorey.github.io/)
 
 ---
 layout: about-me
